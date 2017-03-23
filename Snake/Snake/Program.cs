@@ -37,9 +37,9 @@ namespace Snake
             pList.Add(p2);
             pList.Add(p3);
             pList.Add(p4);
-            for(int i=0; i<4; i++)
+            foreach (Point i in pList)
             {
-                pList[i].Draw();
+                i.Draw();
             }
 
             Console.ReadLine();
