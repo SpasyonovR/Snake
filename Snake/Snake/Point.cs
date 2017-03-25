@@ -11,10 +11,9 @@ namespace Snake
         public int x;
         public int y;
         public char symbol;
-        //Задание конструкторов (пустой и с 3-мя параметрами).
+        //Задание конструкторов.
         public Point()
-        {
-            Console.WriteLine("Инициализация точки без параметров.");
+        {            
         }
         public Point(int _x, int _y, char _sym)
         {
@@ -22,7 +21,33 @@ namespace Snake
             y = _y;
             symbol = _sym;
         }
-                
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            symbol = p.symbol;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction==Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direction.UP)
+            {
+                y = y - offset;
+            }
+            else if (direction == Direction.DOWN)
+            {
+                y = y + offset;
+            }
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);

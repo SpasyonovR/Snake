@@ -21,15 +21,11 @@ namespace Snake
             leftLine.DrawLine();
             rightLine.DrawLine();
 
-            //Вывлд произвольных точек.
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
-            Point p2 = new Point(5, 8, '#');
-            p2.Draw();
-            Point p3 = new Point(2, 4, '%');
-            p3.Draw();
-            Point p4 = new Point(15, 8, '$');
-            p4.Draw();
+            Point p1 = new Point(4, 5, '*');
+            Snake snake = new Snake(p1, 4, Direction.RIGHT);
+            snake.DrawLine();
+            Snake snake2 = new Snake(p1, 4, Direction.DOWN);
+            snake2.DrawLine();
 
             Console.ReadLine();
         }
