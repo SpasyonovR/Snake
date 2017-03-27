@@ -48,6 +48,12 @@ namespace Snake
             }
         }
 
+        public void Clear()
+        {
+            symbol = ' ';
+            Draw();
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
