@@ -25,10 +25,15 @@ namespace Snake
             Point p1 = new Point(4, 5, '*');
             Snake snake = new Snake(p1, 8, Direction.RIGHT);
             snake.DrawLine();
-            for (int i=0; i<50; i++)
+
+            while (true)
             {
+                if(Console.KeyAvailable)
+                {
+                    snake.HandleKey();
+                }
                 snake.Move();
-                Thread.Sleep(300);
+                Thread.Sleep(100);
             }
 
             Console.ReadLine();
